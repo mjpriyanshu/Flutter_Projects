@@ -1,100 +1,29 @@
-# 📝 Flutter To-Do Mini
+# Flutter To-Do Mini
 
-A beautiful and simple To-Do application built with Flutter using Provider for state management. Features a modern black and yellow design inspired by conventional productivity apps.
+A lightweight and efficient task management application with Provider state management and task statistics.
 
-## 🎯 Features
+## 📖 Description
 
-### Core Functionality
-- ✅ **Add Tasks** - Easily add new tasks with a simple text input
-- ✅ **Toggle Tasks** - Mark tasks as completed/incomplete with checkboxes
-- ✅ **Delete Tasks** - Remove tasks with confirmation dialog
-- ✅ **Task Statistics** - Real-time display of total, completed, and pending tasks
+A minimalist yet powerful to-do list application that helps users manage their tasks efficiently. Features a clean amber-themed UI with task statistics and smooth user experience.
 
-### User Experience
-- 🎨 **Modern UI** - Clean design with black and yellow color scheme
-- 📊 **Visual Dashboard** - Statistics cards with gradient background
-- 🔄 **Real-time Updates** - Instant UI updates using Provider state management
-- 💬 **Confirmation Dialogs** - Safe task deletion with user confirmation
-- 📅 **Creation Timestamps** - See when each task was created
-- 🎭 **Empty State** - Friendly message when no tasks exist
+## ✨ Features
+
+- Add new tasks
+- Mark tasks as complete/incomplete
+- Delete tasks
+- Task statistics dashboard
+- Task counter
+- Provider state management
+- Material Design 3 UI
+- Amber color theme
+- Responsive design
 
 ## 🛠️ Technologies Used
 
-- **Flutter** - Cross-platform UI framework
-- **Provider** - State management solution using ChangeNotifier
-- **Material Design** - Google's design system for consistent UI
-- **Dart** - Programming language
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Flutter SDK 
-- Dart SDK
-- Android Studio / VS Code
-r
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd flutter_todomini
-   ```
-
-2. **Install dependencies**
-   ```bash
-   flutter pub get
-   ```
-
-3. **Run the app**
-   ```bash
-   flutter run
-   ```
-
-### Available Platforms
-- ✅ Windows
-- ✅ Android
-- ✅ iOS
-- ✅ Web
-- ✅ macOS
-- ✅ Linux
-
-## 📱 How to Use
-
-1. **Adding Tasks**
-   - Type your task in the text field
-   - Press "Add" button or hit Enter
-   - Task appears in the list below
-
-2. **Managing Tasks**
-   - Tap checkbox to mark as complete/incomplete
-   - Completed tasks show with strikethrough text
-   - Tap delete icon to remove tasks (with confirmation)
-
-3. **Viewing Statistics**
-   - See total tasks, completed, and pending counts
-   - Statistics update automatically as you manage tasks
-
-## 🎨 Design Features
-
-### Color Scheme
-- **Primary**: Amber/Yellow (#FFC107)
-- **Secondary**: Black (#000000)
-- **Accent**: Green for completed tasks, Orange for pending
-
-### UI Components
-- **Gradient Cards** - Amber gradient for statistics
-- **Material Cards** - Clean task item containers
-- **Elevated Buttons** - Amber background with black text
-- **Custom Checkboxes** - Amber active color with black checkmarks
-
-## 🧪 State Management
-
-Uses **Provider** pattern with:
-- `ChangeNotifier` for state updates
-- `Consumer` widgets for reactive UI
-- Immutable task list with proper notifications
+- Flutter SDK
+- Provider package for state management
+- Custom widgets architecture
+- Material Design 3 components
 
 ## 📦 Dependencies
 
@@ -102,60 +31,83 @@ Uses **Provider** pattern with:
 dependencies:
   flutter:
     sdk: flutter
-  provider: ^6.1.2
-
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints: ^5.0.0
+  provider: ^latest
 ```
 
-## 🔄 Key Classes
+## 📁 Project Structure
 
-### Task Model
-```dart
-class Task {
-  final String id;
-  String title;
-  bool isCompleted;
-  final DateTime createdAt;
-}
+```
+lib/
+├── main.dart
+├── providers/
+│   └── task_provider.dart
+└── widgets/
+    ├── add_task_widget.dart
+    ├── task_item.dart
+    └── task_stats_widget.dart
 ```
 
-### TaskProvider
-```dart
-class TaskProvider extends ChangeNotifier {
-  // Methods: addTask, deleteTask, toggleTask
-  // Getters: tasks, totalTasks, completedTasks, pendingTasks
-}
-```
+## 🚀 Getting Started
 
-## 🎯 Learning Objectives
+1. Install dependencies:
+   ```bash
+   flutter pub get
+   ```
 
-This project demonstrates:
-- **State Management** with Provider
-- **Widget Composition** and reusability
-- **Material Design** principles
-- **Form Handling** and user input
-- **List Management** with ListView.builder
-- **Dialog Management** for confirmations
-- **Responsive Design** principles
+2. Run the application:
+   ```bash
+   flutter run
+   ```
 
-## 🐛 Known Issues
+## 🎯 Learning Outcomes
 
-- None currently reported
+- Implementing Provider for state management
+- Creating custom reusable widgets
+- Building to-do list functionality
+- Managing task states
+- Widget composition
+- State persistence patterns
+- Clean architecture principles
 
-## 🔜 Future Enhancements
+## 💡 Features in Detail
 
-- Task editing functionality
-- Task categories/tags
-- Due dates and reminders
-- Data persistence (local storage)
-- Task search and filtering
-- Dark/Light theme toggle
-- Task reordering with drag & drop
+### Task Management
+- **Add Tasks**: Create new tasks with custom widget
+- **Complete Tasks**: Toggle task completion status
+- **Delete Tasks**: Remove completed or unwanted tasks
+- **Task List**: View all tasks in organized list
 
-## 👨‍💻 Developer
+### Statistics
+- Total tasks count
+- Completed tasks count
+- Pending tasks count
+- Visual progress indicators
 
-**Priyanshu**
+### UI Components
+- **AddTaskWidget**: Input form for new tasks
+- **TaskItem**: Individual task card with actions
+- **TaskStatsWidget**: Statistics dashboard
+- **TodoHomePage**: Main screen with all components
+
+## 🎨 Design Theme
+
+- **Primary Color**: Amber
+- **Secondary Color**: Black
+- **Background**: Clean and minimal
+- **Typography**: Bold headers with clear hierarchy
+
+## 🔄 State Management
+
+Uses Provider pattern with:
+- **TaskProvider**: Centralized state management
+- **ChangeNotifier**: For reactive updates
+- **Consumer widgets**: For efficient rebuilds
+
+## 📱 User Experience
+
+- Smooth animations
+- Instant feedback
+- Clean amber theme for focus
+- No banner for clean look
+- AppBar with elevation
 
